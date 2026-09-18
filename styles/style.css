@@ -109,7 +109,6 @@
 
 .card__icon-button {
   display: grid;
-  border: none;
   background: transparent;
   color: var(--accent-color);
   padding: 0;
@@ -170,7 +169,6 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: box-shadow var(--focus-transition) ease;
   transition: box-shadow var(--focus-transition) ease, color var(--hover-transition) ease-in-out;
 }
 
@@ -198,7 +196,6 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: box-shadow var(--focus-transition) ease;
   transition: box-shadow var(--focus-transition) ease, color var(--hover-transition) ease-in-out;
 }
 
