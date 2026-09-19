@@ -170,12 +170,6 @@
   transition: box-shadow var(--focus-transition) ease, color var(--hover-transition) ease-in-out;
 }
 
-.button__text {
-  font-family: var(--font-accent);
-  font-size: 14px;
-  font-weight: 400;
-}
-
 .footer__class {
   display: flex;
   justify-content: center;
@@ -195,22 +189,6 @@
   position: relative;
   overflow: hidden;
   transition: box-shadow var(--focus-transition) ease, color var(--hover-transition) ease-in-out;
-}
-
-.footer__button-text {
-  font-family: var(--font-accent);
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.footer__save-icon {
-  position: relative;
-  inline-size: 21px;
-  color: var(--accent-color);
-  fill: currentColor;
-  opacity: 1;
-  mix-blend-mode: normal;
-  transition: filter var(--hover-transition) ease-in-out, color var(--hover-transition) ease-in-out, opacity 0.25s ease;
 }
 
 .footer__dialog {
@@ -259,16 +237,7 @@
 }
 
 .footer__dialog-button-text {
-  font-family: var(--font-accent);
-  font-size: 14px;
-  font-weight: 400;
   text-transform: uppercase;
-}
-
-.footer__dialog-icon {
-  inline-size: 39px;
-  color: var(--accent-color);
-  fill: currentColor;
 }
 
 
@@ -301,7 +270,7 @@
   filter: sepia(30%) saturate(150%) contrast(115%) brightness(95%) drop-shadow(0 8px 14px rgba(0, 0, 0, 0.45));
 }
 
-.button:focus {
+.button:focus-visible {
   outline: none;
   box-shadow: 2px 2px 0 0 var(--accent-color);
 }
@@ -318,24 +287,34 @@
   transition: transform var(--hover-transition) ease-in-out;
 }
 
-.card__like-button .button__text,
-.footer__button .footer__button-text,
-.footer__dialog-button .footer__dialog-button-text {
+.button:hover::before,
+.button:focus-visible::before {
+  transform: translateX(0);
+}
+
+.button__text,
+.button__icon {
   color: #fff;
   mix-blend-mode: difference;
 }
 
-.footer__button:hover .footer__save-icon,
-.footer__button:focus-visible .footer__save-icon,
-.footer__dialog-button:hover .footer__save-icon,
-.footer__dialog-button:focus-visible .footer__save-icon {
-  filter: invert(1) brightness(1);
-  color: #fff;
+.button__text {
+  font-family: var(--font-accent);
+  font-size: 14px;
+  font-weight: 400;
 }
 
-.button:hover::before,
-.button:focus-visible::before {
-  transform: translateX(0);
+.button__icon {
+  fill: currentColor;
+  aspect-ratio: 1 / 1;
+}
+
+.footer__save-icon {
+  inline-size: 21px;
+}
+
+.footer__dialog-icon {
+  inline-size: 39px;
 }
 
 .card__icon-button:focus {
