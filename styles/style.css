@@ -65,12 +65,10 @@
   place-items: center;
 }
 
-.card__content-section {
-  display: grid;
+.card {
   inline-size: var(--content-width);
   background: var(--bg-block);
   border: 2px solid var(--accent-color);
-  place-items: center;
   overflow: hidden;
 }
 
@@ -275,44 +273,40 @@
 
 
 /* Фильтр карточек */
-.main__card .card__content-section:nth-of-type(1) .card__image {
+.filter-grayscale {
   filter: grayscale(100%);
 }
 
-.main__card .card__content-section:nth-of-type(2) .card__image {
+.filter-sepia {
   filter: sepia(70%);
 }
 
-.main__card .card__content-section:nth-of-type(3) .card__image {
+.filter-saturate {
   filter: saturate(140%);
 }
 
-.main__card .card__content-section:nth-of-type(4) .card__image {
+.filter-hue-rotate {
   filter: hue-rotate(45deg) saturate(120%);
 }
 
-.main__card .card__content-section:nth-of-type(5) .card__image {
+.filter-contrast {
   filter: contrast(120%) brightness(95%);
 }
 
-.main__card .card__content-section:nth-of-type(6) .card__image {
+.filter-blur {
   filter: blur(0.6px) contrast(110%);
 }
 
-.main__card .card__content-section:nth-of-type(7) .card__image {
+.filter-vignette {
   filter: sepia(30%) saturate(150%) contrast(115%) brightness(95%) drop-shadow(0 8px 14px rgba(0, 0, 0, 0.45));
 }
 
-.card__like-button:focus,
-.footer__button:focus,
-.footer__dialog-button:focus {
+.button:focus {
   outline: none;
   box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
-.card__like-button::before,
-.footer__button::before,
-.footer__dialog-button::before {
+.button::before {
   content: "";
   position: absolute;
   left: 0;
@@ -332,25 +326,20 @@
 }
 
 .footer__button:hover .footer__save-icon,
-.footer__button:focus .footer__save-icon,
+.footer__button:focus-visible .footer__save-icon,
 .footer__dialog-button:hover .footer__save-icon,
-.footer__dialog-button:focus .footer__save-icon {
+.footer__dialog-button:focus-visible .footer__save-icon {
   filter: invert(1) brightness(1);
   color: #fff;
 }
 
-.card__like-button:hover::before,
-.footer__button:hover::before,
-.footer__dialog-button:hover::before,
-.card__like-button:focus-visible::before,
-.footer__button:focus-visible::before,
-.footer__dialog-button:focus-visible::before {
+.button:hover::before,
+.button:focus-visible::before {
   transform: translateX(0);
 }
 
-.card__like-button:focus-visible::before,
-.footer__button:focus-visible::before,
-.footer__dialog-button:focus-visible::before {
+.button:hover::before,
+.button:focus-visible::before {
   transform: translateX(0);
 }
 
