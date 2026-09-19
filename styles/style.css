@@ -338,11 +338,6 @@
   transform: translateX(0);
 }
 
-.button:hover::before,
-.button:focus-visible::before {
-  transform: translateX(0);
-}
-
 .card__icon-button:focus {
   outline: none;
 }
